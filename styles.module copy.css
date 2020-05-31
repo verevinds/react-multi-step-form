@@ -1,0 +1,8 @@
+.form {
+  min-height: 100px;
+}
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

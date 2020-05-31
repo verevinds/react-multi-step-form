@@ -10,13 +10,7 @@ import { MutiStepContext } from './context';
 import MultiStepForm, { IMultiStepForm } from './MultiStepForm';
 import styles from './styles.module.css';
 
-interface IMultiStepButton extends IMultiStepForm {
-  children: any;
-  nextStep?: () => void;
-  prevStep?: () => void;
-}
-
-const MultiStepButton: React.FC<IMultiStepButton> = ({
+const MultiStepButton = ({
   nextStep,
   prevStep,
   handleChange,
@@ -25,9 +19,8 @@ const MultiStepButton: React.FC<IMultiStepButton> = ({
 }) => {
   const { state } = useContext(MutiStepContext);
   const handleMove = useCallback(
-    function (e: FormEvent<HTMLFormElement>) {
-      e.preventDefault();
-      console.dir(arguments[0]);
+    function (event) {
+      event.preventDefault();
       nextStep ? nextStep() : console.log('Done!', state);
     },
     [nextStep, state],
@@ -61,8 +54,8 @@ const MultiStepButton: React.FC<IMultiStepButton> = ({
         type="submit"
         value="Назад"
         name="prevStep"
-        onClick={(e: any) => {
-          e.preventDefault();
+        onClick={(event) => {
+          event.preventDefault();
           if (!!prevStep) prevStep();
         }}
         disabled={!prevStep}

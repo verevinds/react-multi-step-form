@@ -1,5 +1,5 @@
 {
-  "name": "react-multi-step-form",
+  "name": "@verevinds/react-multi-step-form",
   "version": "1.0.0",
   "description": "Multi step form for \"React\" applications based on \"Bootstrap\"",
   "main": "index.js",

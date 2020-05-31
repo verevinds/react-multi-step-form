@@ -1,14 +1,7 @@
 import React, { memo, useMemo } from 'react';
 import { Form } from 'react-bootstrap';
 
-export interface IMultiStepForm {
-  handleChange?: (
-    name: string,
-  ) => (e: React.ChangeEvent<HTMLInputElement>) => void;
-  input?: any;
-}
-
-const MultiStepForm: React.FC<IMultiStepForm> = ({ input, handleChange }) => {
+const MultiStepForm = ({ input, handleChange }) => {
   const jsx = useMemo(() => {
     let jsx = [];
     for (let key in input) {
@@ -28,14 +21,7 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({ input, handleChange }) => {
         </>
       );
 
-      const formChek = (
-        type: any,
-        key: string,
-        description: string,
-        handleChange?: (
-          arg0: string,
-        ) => (event: React.ChangeEvent<HTMLInputElement>) => void,
-      ) => {
+      const formChek = (type, key, description, handleChange) => {
         return (
           <Form.Check
             type={type}
