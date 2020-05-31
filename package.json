@@ -1,0 +1,29 @@
+{
+  "name": "react-multi-step-form",
+  "version": "1.0.0",
+  "description": "Multi step form for \"React\" applications based on \"Bootstrap\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verevinds/react-multi-step-form.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "form",
+    "input",
+    "multi",
+    "step",
+    "validation",
+    "submit"
+  ],
+  "author": "Verevin S. Denis <verevinds@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verevinds/react-multi-step-form/issues"
+  },
+  "homepage": "https://github.com/verevinds/react-multi-step-form#readme"
+}
